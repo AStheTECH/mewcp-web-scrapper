@@ -9,11 +9,11 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("webscraper-mcp-server")
 
 
-mcp = FastMCP("CL Web Scraper MCP Server")
+mcp = FastMCP("MewCP Web Scraper MCP Server")
 register_tools(mcp)
 
 # Expose ASGI app for hosting platform's (e.g. Vercel) Python runtime.
-app = mcp.http_app(path="/mcp", transport="streamable-http")
+app = mcp.http_app(path="/mcp", transport="streamable-http", stateless_http=True)
 
 if __name__ == "__main__":
     logger.info("=" * 60)
