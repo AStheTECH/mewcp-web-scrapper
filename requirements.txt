@@ -1,3 +1,4 @@
 requests
 beautifulsoup4
-fastmcp
+fastmcp==4.0.5
+fastmcp-credentials==0.2.0
